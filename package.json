@@ -1,0 +1,79 @@
+{
+  "name": "stryve",
+  "version": "0.4.0-alpha",
+  "description": "A socket.io-driven messaging application, heavily inspired by Discord and Slack.",
+  "author": "https://github.com/nicklaw5",
+  "license": "MIT",
+  "main": "index.html",
+  "scripts": {
+    "build": "node_modules/.bin/shjs scripts/build",
+    "postinstall": "node_modules/.bin/shjs scripts/post-install",
+    "w-app": "webpack-dev-server --inline --hot",
+    "d-app": "webpack --progress --hide-modules && nw .",
+    "dev-server": "node src/server",
+    "prod-server": "SET PROD_ENV=1 & node src/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nicklaw5/stryve.git"
+  },
+  "nwjsBuilder": {
+    "productName": "Stryve",
+    "productVersion": "0.4.0-alpha",
+    "fileDescription": "Stryve"
+  },
+  "window": {
+    "title": "Stryve",
+    "icon": "src/assets/img/logo-100x100.png",
+    "frame": true,
+    "width": 1000,
+    "height": 500,
+    "position": "center",
+    "min_width": 800,
+    "min_height": 400
+  },
+  "webkit": {
+    "plugin": true,
+    "java": false
+  },
+  "dependencies": {
+    "babel-cli": "^6.8.0",
+    "babel-core": "^6.8.0",
+    "babel-preset-es2015": "^6.6.0",
+    "express": "^4.10.2",
+    "socket.io": "^1.4.4",
+    "striptags": "^2.1.1",
+    "stryve-api-client": "^0.1.0",
+    "uuid": "^2.0.2"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.0",
+    "babel-plugin-transform-runtime": "^6.0.0",
+    "babel-preset-stage-2": "^6.1.18",
+    "babel-runtime": "^6.0.0",
+    "cls-bluebird": "^1.0.1",
+    "css-loader": "^0.23.1",
+    "emojify.js": "^1.1.0",
+    "file-loader": "^0.8.4",
+    "font-awesome-webpack": "0.0.4",
+    "json": "^9.0.3",
+    "json-loader": "^0.5.4",
+    "lodash": "^4.7.0",
+    "moment": "^2.12.0",
+    "nwjs-builder": "^1.11.2",
+    "offline-js": "^0.7.15",
+    "shelljs": "^0.7.0",
+    "sillyname": "^0.1.0",
+    "socket.io-client": "^1.4.5",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "vue": "^1.0.20",
+    "vue-hot-reload-api": "^1.2.1",
+    "vue-html-loader": "^1.0.0",
+    "vue-loader": "^8.2.0",
+    "vue-style-loader": "^1.0.0",
+    "vuex": "^0.6.2",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
